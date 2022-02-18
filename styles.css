@@ -1,0 +1,199 @@
+:root{
+    --Violet: hsl(257, 40%, 49%);
+    --SoftMagenta: hsl(300, 69%, 71%);
+
+}
+
+
+/* ---------- */
+/* RESET */
+/* ---------- */
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* --------------- */
+/* UTILITY CLASSES */
+/* --------------- */
+
+.sans{
+    font-family: 'Open Sans', sans-serif;
+
+}
+.poppins{
+    font-family: 'Poppins', sans-serif;
+}
+
+.flex{
+    display: flex;
+}
+/* ---------- */
+/* COMPONENTS */
+/* ---------- */
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body{
+    background-image: url(./images/bg-desktop.svg);
+    background-size: contain;
+    background-color: var(--Violet);
+}
+
+.body{
+    gap: 1.5em;
+    margin-inline: 1.7em;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo{
+    margin: 2.5em;
+    width: 10em;
+    
+}
+
+.header{
+    color: white;
+    text-align: center;
+    margin: 0 1em .5em 1em;
+    width: 50%;
+    font-weight: 600;
+}
+
+.text{
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0 1em 0;
+}
+
+.details{
+    width: 58%;
+    text-align: center;
+    font-weight: 400;
+}
+.register{
+    color: var(--Violet);
+    padding: .8em 6em;
+    border-radius: 1.8em;
+    border-style: none;
+    margin-top: 2em;
+    font-size: .8em;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+}
+
+.register:hover{
+    background-color: var(--SoftMagenta);
+    color: white;
+}
+
+.image{
+    padding: 1em;
+}
+
+main{
+    margin-bottom: 1em;
+}
+
+.socials{
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 1.7em;
+    margin-top: 3em;
+}
+
+.fb,
+.twit,
+.insta{
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+    padding: .5em;
+    aspect-ratio: 1;
+    
+}
+
+.fb:hover,
+.twit:hover,
+.insta:hover{
+    color: var(--SoftMagenta);
+    border-color: var(--SoftMagenta);
+}
+
+@media screen and (min-width:600px) {
+
+    .body{
+        flex-direction: row;  
+    }
+    .text{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .socials{
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-right: 4em;
+        margin-bottom: 1em;
+    }
+
+    .header{
+        font-size: 35px;
+        margin-left: 0;
+        width: 80%;
+    }
+
+    .details{
+        width: 100%;
+        font-size: 1.15em;
+    }
+
+    .main-image{
+        height: 25em;
+        width: 100em;
+    }
+    
+}
